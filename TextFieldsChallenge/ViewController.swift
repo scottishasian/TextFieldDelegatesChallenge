@@ -8,18 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    
+    @IBOutlet weak var postCodeField: UITextField!
+    @IBOutlet weak var cashField: UITextField!
+    @IBOutlet weak var textField1: UITextField!
+    
+    @IBAction func textFieldToggle(_ sender: Any) {
+        if !(sender as! UISwitch).isOn {
+            self.textField1.isEnabled = false
+            self.textField1.resignFirstResponder()
+        } else {
+            self.textField1.isEnabled = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        self.textField1.delegate = self
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    }
 
 }
 
