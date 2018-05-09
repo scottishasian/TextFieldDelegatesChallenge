@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cashField: UITextField!
     @IBOutlet weak var textField1: UITextField!
     
+    let postCodeDelegate = PostCodeViewDelegate()
+    
     @IBAction func textFieldToggle(_ sender: Any) {
         if !(sender as! UISwitch).isOn {
             self.textField1.isEnabled = false
@@ -28,6 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.textField1.delegate = self
+        self.postCodeField.delegate = postCodeDelegate
 
 
     }

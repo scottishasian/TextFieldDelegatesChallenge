@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2402222D20A381BE00230A4A /* PostCodeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2402222C20A381BE00230A4A /* PostCodeViewDelegate.swift */; };
 		2498ED3E209E1A88009F6412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498ED3D209E1A88009F6412 /* AppDelegate.swift */; };
 		2498ED40209E1A88009F6412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498ED3F209E1A88009F6412 /* ViewController.swift */; };
 		2498ED43209E1A88009F6412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2498ED41209E1A88009F6412 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2402222C20A381BE00230A4A /* PostCodeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCodeViewDelegate.swift; sourceTree = "<group>"; };
 		2498ED3A209E1A87009F6412 /* TextFieldsChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFieldsChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2498ED3D209E1A88009F6412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2498ED3F209E1A88009F6412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2402222B20A3819D00230A4A /* View Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				2402222C20A381BE00230A4A /* PostCodeViewDelegate.swift */,
+			);
+			path = "View Delegates";
+			sourceTree = "<group>";
+		};
 		2498ED31209E1A87009F6412 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		2498ED3C209E1A88009F6412 /* TextFieldsChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				2402222B20A3819D00230A4A /* View Delegates */,
 				2498ED3D209E1A88009F6412 /* AppDelegate.swift */,
 				2498ED3F209E1A88009F6412 /* ViewController.swift */,
 				2498ED41209E1A88009F6412 /* Main.storyboard */,
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2498ED40209E1A88009F6412 /* ViewController.swift in Sources */,
+				2402222D20A381BE00230A4A /* PostCodeViewDelegate.swift in Sources */,
 				2498ED3E209E1A88009F6412 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
