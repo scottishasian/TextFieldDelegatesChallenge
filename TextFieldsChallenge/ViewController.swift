@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField1: UITextField!
     
     let postCodeDelegate = PostCodeViewDelegate()
+    let cashViewDelegate = CashViewDelegate()
     
     @IBAction func textFieldToggle(_ sender: Any) {
         if !(sender as! UISwitch).isOn {
@@ -31,8 +32,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.textField1.delegate = self
         self.postCodeField.delegate = postCodeDelegate
+        self.cashField.delegate = cashViewDelegate
 
 
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true;
     }
 
 }

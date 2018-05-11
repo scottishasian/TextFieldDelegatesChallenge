@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PostCodeViewDelegate: UIViewController, UITextFieldDelegate {
+class PostCodeViewDelegate: NSObject, UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -18,8 +18,12 @@ class PostCodeViewDelegate: UIViewController, UITextFieldDelegate {
         let maxLength = text.utf16.count + string.utf16.count - range.length
         return maxLength <= 5
         
-        //sets max length
-        //need to write it to only accept numbers.
+        //from stackoverflow research
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true;
+    }
 }
